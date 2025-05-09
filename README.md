@@ -1,323 +1,191 @@
-# TE IT DSBDA PRACTICALS
+# 🚀 TE IT DSBDA PRACTICALS
 
-This repository contains all the practicals for Third Year Information Technology - Data Science and Big Data Analytics Lab.
+[![GitHub stars](https://img.shields.io/github/stars/alokbhorunde9814/DSBDA_LAB?style=social)](https://github.com/alokbhorunde9814/DSBDA_LAB/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/alokbhorunde9814/DSBDA_LAB?style=social)](https://github.com/alokbhorunde9814/DSBDA_LAB/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/alokbhorunde9814/DSBDA_LAB)](https://github.com/alokbhorunde9814/DSBDA_LAB/issues)
+[![GitHub license](https://img.shields.io/github/license/alokbhorunde9814/DSBDA_LAB)](https://github.com/alokbhorunde9814/DSBDA_LAB/blob/main/LICENSE)
 
-## Prerequisites
-- Hadoop 2.x or 3.x
-- Java 8 or higher
-- Python 3.x with required libraries
-- Hive
-- R Studio
-- MongoDB
-- Jupyter Notebook
+> 📚 A comprehensive collection of practical assignments for Third Year Information Technology - Data Science and Big Data Analytics Lab.
 
-## Detailed Assignment List
+## 🎯 Overview
 
-### Assignment 1: Basic Statistics and Data Preprocessing
+This repository contains hands-on practical assignments covering various aspects of Data Science and Big Data Analytics. Each assignment is designed to provide practical experience with real-world data processing and analysis techniques.
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Category | Technologies |
+|----------|-------------|
+| 🐍 Programming Languages | Python, Java, R |
+| 💾 Databases | MongoDB, Hive |
+| 🖥️ Big Data | Hadoop, MapReduce |
+| 📊 Data Analysis | Pandas, NumPy, Scikit-learn |
+| 📈 Visualization | Matplotlib, Seaborn, Plotly |
+| 🔧 Tools | Jupyter Notebook, R Studio |
+
+</div>
+
+## 📋 Assignment Roadmap
+
+### 📌 Assignment 1: Data Preprocessing & Statistics
 **Location**: `1st/`
-**Objective**: Learn data preprocessing techniques and basic statistical operations
-**Steps to Run**:
-1. Environment Setup:
-```bash
-pip install pandas numpy matplotlib seaborn scipy scikit-learn
-```
-2. Dataset Preparation:
-   - Use provided dataset or your own dataset
-   - Ensure dataset is in CSV format
-   - Place dataset in `1st/` directory
+**Objective**: Master the art of data cleaning and basic statistical analysis
+**Key Skills**:
+- 🧹 Data cleaning
+- 📊 Statistical analysis
+- 📈 Data visualization
+- 🔍 Outlier detection
 
-3. Running the Analysis:
-   - Open Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-   - Navigate to `1st/` directory
-   - Open the notebook file
-
-4. Operations Covered:
-   - Data loading and inspection
-   - Handling missing values
-   - Statistical measures (mean, median, mode)
-   - Data normalization
-   - Feature scaling
-   - Outlier detection
-   - Data visualization
-
-### Assignment 2: MapReduce Programming
+### 📌 Assignment 2: MapReduce Programming
 **Location**: `2nd/`
-**Objective**: Implement MapReduce program for analyzing sales data
-**Prerequisites**:
-1. Hadoop Setup:
-   ```bash
-   # Start Hadoop daemons
-   start-dfs.sh
-   start-yarn.sh
-   ```
+**Objective**: Learn distributed computing with Hadoop
+**Key Skills**:
+- 🗺️ MapReduce programming
+- 📊 Data aggregation
+- 🔄 Parallel processing
+- 📈 Performance optimization
 
-2. File Structure:
-   - `SalesMapper.java`: Contains mapping logic
-   - `SalesReducer.java`: Contains reducing logic
-   - `SalesCountryDriver.java`: Main driver class
-   - `access_log_short.csv`: Input data file
-
-3. Compilation Steps:
-   ```bash
-   # Set HADOOP_CLASSPATH
-   export HADOOP_CLASSPATH=$(hadoop classpath)
-
-   # Compile Java files
-   javac -cp $HADOOP_CLASSPATH SalesMapper.java SalesReducer.java SalesCountryDriver.java
-
-   # Create JAR
-   jar -cvf SalesAnalysis.jar *.class
-   ```
-
-4. Running MapReduce Job:
-   ```bash
-   # Create input directory in HDFS
-   hadoop fs -mkdir /input
-   hadoop fs -put access_log_short.csv /input
-
-   # Run the job
-   hadoop jar SalesAnalysis.jar SalesCountryDriver /input/access_log_short.csv /output
-   ```
-
-5. View Results:
-   ```bash
-   hadoop fs -cat /output/part-r-00000
-   ```
-
-### Assignment 3: NoSQL Database Operations
+### 📌 Assignment 3: NoSQL Operations
 **Location**: `3rd/`
-**Objective**: Working with MongoDB for NoSQL operations
+**Objective**: Explore NoSQL database operations
+**Key Skills**:
+- 💾 MongoDB operations
+- 🔄 CRUD operations
+- 📊 Aggregation pipelines
+- 🔍 Query optimization
 
-1. MongoDB Setup:
-   ```bash
-   # Start MongoDB service
-   sudo service mongod start
-   ```
-
-2. Database Operations:
-   ```javascript
-   // Connect to MongoDB
-   mongosh
-
-   // Create database
-   use studentDB
-
-   // Insert documents
-   db.students.insertMany([...])
-
-   // Perform CRUD operations
-   db.students.find()
-   db.students.updateOne()
-   db.students.deleteOne()
-   ```
-
-3. Aggregation Operations:
-   - Group by operations
-   - Filtering
-   - Sorting
-   - Projections
-
-4. Implementation Details:
-   - Refer to `ass3_implementation.pdf`
-   - Theory concepts in `ass3_theory.pdf`
-
-### Assignment 4: Text Analytics
+### 📌 Assignment 4: Text Analytics
 **Location**: `4th/`
-**Objective**: Text preprocessing and sentiment analysis
+**Objective**: Master text processing and sentiment analysis
+**Key Skills**:
+- 📝 Text preprocessing
+- 🎯 Sentiment analysis
+- 📊 Word cloud generation
+- 🔍 Named Entity Recognition
 
-1. Setup Environment:
-```bash
-pip install nltk textblob wordcloud pandas numpy matplotlib seaborn
-```
-
-2. NLTK Setup:
-```python
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-```
-
-3. Text Processing Steps:
-   - Tokenization
-   - Stop word removal
-   - Lemmatization
-   - Part-of-speech tagging
-   - Named Entity Recognition
-
-4. Sentiment Analysis:
-   - Using TextBlob for sentiment scoring
-   - Visualization of sentiment distribution
-   - Word cloud generation
-
-### Assignment 5: Air Quality Analysis
+### 📌 Assignment 5: Air Quality Analysis
 **Location**: `5th/`
-**Objective**: Statistical analysis of air quality data
+**Objective**: Perform statistical analysis on environmental data
+**Key Skills**:
+- 📊 Time series analysis
+- 🔍 Correlation analysis
+- 📈 Statistical testing
+- 🌍 Environmental data analysis
 
-1. Dataset Setup:
-   - Download air_quality.csv separately (>50MB)
-   - Place in `5th/` directory
-
-2. Analysis Components:
-   - Time series analysis
-   - Correlation analysis
-   - Statistical hypothesis testing
-   - Visualization of pollution trends
-
-3. Running Analysis:
-```python
-python air_quality_analysis.py
-```
-
-4. Visualization Types:
-   - Line plots for time series
-   - Heatmaps for correlation
-   - Box plots for distribution
-   - Bar charts for comparisons
-
-### Assignment 6: Data Visualization
+### 📌 Assignment 6: Data Visualization
 **Location**: `6th/`
-**Objective**: Advanced data visualization techniques
+**Objective**: Create compelling data visualizations
+**Key Skills**:
+- 📊 Interactive dashboards
+- 🎨 Custom plot styling
+- 🌍 Geographic visualizations
+- 📈 Statistical plots
 
-1. Libraries Used:
-```bash
-pip install plotly dash seaborn matplotlib pandas
-```
-
-2. Visualization Types:
-   - Interactive dashboards
-   - Statistical plots
-   - Geographic visualizations
-   - Custom plot styling
-
-### Assignment 7: Association Rule Mining
+### 📌 Assignment 7: Association Rule Mining
 **Location**: `7th/`
-**Objective**: Market basket analysis
+**Objective**: Implement market basket analysis
+**Key Skills**:
+- 🔍 Pattern mining
+- 📊 Association rules
+- 📈 Rule visualization
+- 🛒 Market basket analysis
 
-1. Setup:
+### 📌 Assignment 8: Classification Techniques
+**Location**: `8th/`
+**Objective**: Master machine learning classification
+**Key Skills**:
+- 🌳 Decision Trees
+- 🌲 Random Forest
+- 🎯 SVM
+- 👥 K-NN
+
+### 📌 Assignment 9: Clustering Analysis
+**Location**: `9th/`
+**Objective**: Implement clustering algorithms
+**Key Skills**:
+- 🔢 K-Means
+- 🌳 Hierarchical Clustering
+- 📊 DBSCAN
+- 📈 Cluster evaluation
+
+### 📌 Assignment 10: Big Data Analytics
+**Location**: `10th/`
+**Objective**: Work with big data processing
+**Key Skills**:
+- ⚡ PySpark
+- 🐘 Hadoop
+- 🐝 Hive
+- 📊 Data warehousing
+
+## 🚀 Quick Start
+
+1. **Clone the Repository**
 ```bash
-pip install mlxtend pandas numpy
+git clone https://github.com/alokbhorunde9814/DSBDA_LAB.git
+cd DSBDA_LAB
 ```
 
-2. Analysis Steps:
-   - Data preprocessing
-   - Apriori algorithm implementation
-   - Association rule generation
-   - Rule visualization
+2. **Setup Environment**
+```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-### Assignment 8: Classification Techniques
-**Location**: `8th/`
-**Objective**: Implementation of classification algorithms
+# Install dependencies
+pip install -r requirements.txt
+```
 
-1. Algorithms Covered:
-   - Decision Trees
-   - Random Forest
-   - Support Vector Machines
-   - K-Nearest Neighbors
+3. **Download Large Files**
+- [Hadoop](https://hadoop.apache.org/releases.html) (204.76 MB)
+- [Hive](https://hive.apache.org/downloads.html) (142.67 MB)
+- [Air Quality Dataset](https://www.kaggle.com/datasets) (59.64 MB)
 
-2. Implementation Steps:
-   - Data preprocessing
-   - Model training
-   - Cross-validation
-   - Performance evaluation
+## 📚 Resources
 
-### Assignment 9: Clustering Analysis
-**Location**: `9th/`
-**Objective**: Implementation of clustering algorithms
+- 📖 [Hadoop Documentation](https://hadoop.apache.org/docs/current/)
+- 📖 [MongoDB Manual](https://docs.mongodb.com/manual/)
+- 📖 [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- 📖 [R for Data Science](https://r4ds.had.co.nz/)
 
-1. Algorithms:
-   - K-Means
-   - Hierarchical Clustering
-   - DBSCAN
+## 🤝 Contributing
 
-2. Analysis Steps:
-   - Feature selection
-   - Algorithm implementation
-   - Cluster visualization
-   - Evaluation metrics
+We welcome contributions! Here's how you can help:
 
-### Assignment 10: Big Data Analytics
-**Location**: `10th/`
-**Objective**: Big data processing and analysis
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-1. Tools Used:
-   - PySpark
-   - Hadoop
-   - Hive
+## 🐛 Troubleshooting
 
-2. Implementation:
-   - Big data processing
-   - Distributed computing
-   - Data warehousing
-   - Analytics pipeline
+### Common Issues
 
-## Hive Installation and Setup
-**Location**: `Hive installation/`
-
-1. Prerequisites:
-   - Hadoop installed and running
-   - Java 8 or higher
-   - Proper environment variables set
-
-2. Installation Steps:
-   ```bash
-   # Download Hive
-   wget https://downloads.apache.org/hive/hive-x.x.x/apache-hive-x.x.x-bin.tar.gz
-
-   # Extract and set environment variables
-   export HIVE_HOME=/path/to/hive
-   export PATH=$PATH:$HIVE_HOME/bin
-   ```
-
-3. Configuration:
-   - Configure `hive-site.xml`
-   - Initialize Metastore
-   - Start HiveServer2
-
-4. Verification:
-   ```bash
-   hive --version
-   ```
-
-## Important Notes
-1. Large Files:
-   The following files need to be downloaded separately:
-   - `hadoop.tar.gz` (204.76 MB)
-   - `hive.tar.gz` (142.67 MB)
-   - `air_quality.csv` (59.64 MB)
-
-2. Best Practices:
-   - Always create virtual environment
-   - Keep datasets in appropriate directories
-   - Follow proper naming conventions
-   - Document any changes
-
-## Troubleshooting
-1. Hadoop Issues:
+1. **Hadoop Issues**
    - Check logs in `$HADOOP_HOME/logs`
    - Verify JAVA_HOME setting
    - Check port availability
 
-2. Python Dependencies:
+2. **Python Dependencies**
    - Use `requirements.txt`
    - Check Python version compatibility
    - Verify library versions
 
-## Contributing
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Create Pull Request
+## 📞 Support
 
-## Contact
-For queries:
-- Course Instructor
-- Lab Assistants
-- Department Coordinators
+Need help? Here's how to reach us:
 
-## License
-This project is licensed under standard academic usage terms. Please check with your institution for specific terms of use. 
+- 📧 Course Instructor
+- 👥 Lab Assistants
+- 📱 Department Coordinators
+
+## 📄 License
+
+This project is licensed under standard academic usage terms. Please check with your institution for specific terms of use.
+
+---
+
+<div align="center">
+Made with ❤️ by TE IT Students
+</div> 
