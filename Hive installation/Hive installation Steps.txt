@@ -1,0 +1,41 @@
+﻿Hive 
+Extract the file 2 times. Rename one folder to “hive”
+
+
+# sudo mv hive /usr/local/
+# sudo chown student:student /usr/local/hive
+# sudo mkdir /home/edureka
+#sudo mv apache-hive-2.1.0-bin /home/edureka/
+# sudo chown -R student:student /home/edureka           #student is a username
+
+
+# vim  .bashrc  //Add below 2 lines at the end 
+ 
+export HIVE_HOME=/home/edureka/apache-hive-2.1.0-bin
+export PATH=$PATH:/home/edureka/apache-hive-2.1.0-bin/bin
+
+press escape to come out
+press shift;wq and press enter
+
+#source .bashrc 
+
+# cd /usr/local/hadoop/hadoop-2.7.0/bin/
+# hdfs dfs -mkdir -p /user/hive/warehouse 
+# hdfs dfs -mkdir -p /tmp/hive 
+# hdfs dfs -chmod -R 777 /tmp 
+# hdfs dfs -chmod -R 777 /user/hive/warehouse 
+# hdfs dfs -chmod 777 /tmp/hive 
+
+# cd /usr/local/hive/conf
+# sudo cp hive-env.sh.template hive-env.sh
+# sudo gedit  hive-env.sh
+ 
+ 
+export HADOOP_HEAPSIZE=1024    // uncooment in original file 
+export HADOOP_HOME=/usr/local/hadoop/hadoop-2.7.0     //replace with HADOOP_HOME
+
+
+# cd /usr/local/hive/bin
+# ./schematool -initSchema -dbType derby 
+#  ./hive
+
