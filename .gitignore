@@ -1,2 +1,11 @@
-# Ignore large files
-Hive installation/hive.tar.gz 
+# Ignore large files (exceeding GitHub's limits)
+Hive installation/hive.tar.gz
+1st/hadoop.tar.gz
+5th/air_quality.csv
+
+# Ignore common large file types
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.iso 
