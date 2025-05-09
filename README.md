@@ -172,14 +172,6 @@ We welcome contributions! Here's how you can help:
    - Check Python version compatibility
    - Verify library versions
 
-## 📞 Support
-
-Need help? Here's how to reach us:
-
-- 📧 Course Instructor
-- 👥 Lab Assistants
-- 📱 Department Coordinators
-
 ## 📄 License
 
 This project is licensed under standard academic usage terms. Please check with your institution for specific terms of use.
@@ -187,5 +179,5 @@ This project is licensed under standard academic usage terms. Please check with 
 ---
 
 <div align="center">
-Made with ❤️ by TE IT Students
+Made with ❤️ by Alok Bhorunde
 </div> 
