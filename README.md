@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/github/license/alokbhorunde9814/DSBDA_LAB)](https://github.com/alokbhorunde9814/DSBDA_LAB/blob/main/LICENSE)
 
 > 📚 A comprehensive collection of practical assignments for Third Year Information Technology - Data Science and Big Data Analytics Lab.
-
+> VIVA - https://chatgpt.com/share/681ebd0d-439c-8007-8f81-335cfc79562a
 ## 🎯 Overview
 
 This repository contains hands-on practical assignments covering various aspects of Data Science and Big Data Analytics. Each assignment is designed to provide practical experience with real-world data processing and analysis techniques.
